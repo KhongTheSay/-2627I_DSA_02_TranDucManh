@@ -1,0 +1,19 @@
+a) Số lần thực thi thân vòng lặp trong cùng:
+- Duyệt qua tất cả bộ ba (i, j, k) với 0 <= i < j < k < N, bằng tổ hợp chập 3 của N:
+  C(N, 3) = N*(N-1)*(N-2)/6 ~ (1/6) * N^3 lần.
+-> Đáp án: ~ (1/6) * N^3
+
+b) Phép toán số học:
+- Mỗi lần kiểm tra thực hiện 2 phép cộng (a[i] + a[j] + a[k]).
+-> Đáp án: 2 * C(N, 3) ~ (1/3) * N^3 phép cộng
+
+c) Phép toán so sánh:
+- Mỗi lần lặp thực hiện 1 phép so sánh đẳng thức (== 0).
+- So sánh điều kiện vòng lặp k < N tốn thêm ~ (1/6) * N^3 lần.
+-> Đáp án: ~ (1/6) * N^3 phép so sánh (== 0), tổng so sánh ~ (1/3) * N^3
+
+d) Phép truy cập mảng:
+- Mỗi lần lặp truy cập 3 phần tử: a[i], a[j], a[k].
+-> Đáp án: 3 * C(N, 3) ~ (1/2) * N^3 lần truy cập
+
+=> Kết luận: Thời gian chạy tỷ lệ thuận với N^3 (Bậc tăng O(N^3))

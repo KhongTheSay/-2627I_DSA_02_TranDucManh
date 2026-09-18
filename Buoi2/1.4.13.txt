@@ -1,0 +1,31 @@
+(Quy ước 64-bit: Tiêu đề đối tượng 16 bytes, tham chiếu 8 bytes, đệm tròn lên bội số của 8 bytes)
+
+a) Accumulator
+- Gồm: 16 (overhead) + 8 (double total) + 4 (int N) + 4 (padding).
+-> Đáp án: 32 bytes
+
+b) Transaction
+- Gồm: 16 (overhead) + 8 (ref who) + 8 (ref when) + 8 (double amount).
+-> Đáp án: 40 bytes (shallow memory)
+
+c) FixedCapacityStackOfStrings (kích thước mảng C, có N phần tử)
+- Bản thân Stack: 16 (overhead) + 8 (ref mảng) + 4 (int N) + 4 (padding) = 32 bytes.
+- Mảng String[C]: 24 (overhead mảng) + 8*C (tham chiếu).
+-> Đáp án: 56 + 8C bytes
+
+d) Point2D
+- Gồm: 16 (overhead) + 8 (double x) + 8 (double y).
+-> Đáp án: 32 bytes
+
+e) Interval1D
+- Gồm: 16 (overhead) + 8 (double min) + 8 (double max).
+-> Đáp án: 32 bytes
+
+f) Interval2D
+- Gồm: 16 (overhead) + 8 (ref x) + 8 (ref y) = 32 bytes (shallow).
+- Nếu tính cả 2 đối tượng con Interval1D (mỗi cái 32 bytes): 32 + 32*2 = 96 bytes.
+-> Đáp án: 32 bytes (shallow) hoặc 96 bytes (tính cả đối tượng con)
+
+g) Double
+- Gồm: 16 (overhead) + 8 (double value).
+-> Đáp án: 24 bytes

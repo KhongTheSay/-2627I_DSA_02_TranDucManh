@@ -1,0 +1,14 @@
+a)
+- n giảm một nửa sau mỗi lần lặp: n = N, N/2, N/4, ..., 1.
+- Tổng số lần thực hiện: N + N/2 + N/4 + ... + 1 ~ 2N.
+-> Đáp án: Tuyến tính ~ 2N (hoặc O(N))
+
+b)
+- i nhân đôi sau mỗi lần lặp: i = 1, 2, 4, 8, ..., < N.
+- Tổng số lần thực hiện: 1 + 2 + 4 + ... + 2^k ~ N.
+-> Đáp án: Tuyến tính ~ N (hoặc O(N))
+
+c)
+- Vòng ngoài lặp lgN lần, vòng trong luôn chạy cố định N lần.
+- Tổng số lần thực hiện: N * lgN.
+-> Đáp án: Tuyến tính - logarit ~ N lg N (hoặc O(N log N))
