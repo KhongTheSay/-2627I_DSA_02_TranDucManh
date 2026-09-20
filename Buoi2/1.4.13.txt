@@ -1,4 +1,4 @@
-(Quy ước 64-bit: Tiêu đề đối tượng 16 bytes, tham chiếu 8 bytes, đệm tròn lên bội số của 8 bytes)
+
 
 a) Accumulator
 - Gồm: 16 (overhead) + 8 (double total) + 4 (int N) + 4 (padding).
