@@ -1,0 +1,1 @@
+Đoạn code dùng stack để đảo ngược thứ tự các phần tử trong queue q.

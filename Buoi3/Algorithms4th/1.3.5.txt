@@ -1,0 +1,2 @@
+- Khi N = 50: in ra 110010
+- Mô tả: In ra biểu diễn nhị phân của số nguyên dương N.
