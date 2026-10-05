@@ -1,0 +1,4 @@
+2.1.3
+Ví dụ: Mảng giảm dần (reverse sorted).
+Ví dụ cụ thể với N = 5: 5, 4, 3, 2, 1
+(Mỗi lần xét phần tử mới đều nhỏ hơn min hiện tại, do đó min được cập nhật tối đa N - 1 - i lần ở mỗi bước).

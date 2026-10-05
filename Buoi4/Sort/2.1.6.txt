@@ -1,0 +1,4 @@
+2.1.6
+Insertion sort chạy nhanh hơn.
+- Insertion sort chỉ mất N - 1 phép so sánh và 0 phép đổi chỗ -> thời gian chạy là tuyến tính O(N).
+- Selection sort vẫn phải duyệt tìm min qua mọi cặp -> thời gian chạy là bậc hai ~ N^2 / 2, tức O(N^2).

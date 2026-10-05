@@ -1,0 +1,74 @@
+========================================
+BÀI TẬP TẠI GIÁO TRÌNH ALGORITHMS 4TH
+Phần 2.1. Elementary Sorts
+========================================
+
+2.1.1 Trình bày cách sắp xếp chuỗi E A S Y Q U E S T I O N bằng Selection sort:
+
+i   min  0  1  2  3  4  5  6  7  8  9 10 11
+         E  A  S  Y  Q  U  E  S  T  I  O  N
+0    1   A  E  S  Y  Q  U  E  S  T  I  O  N
+1    1   A  E  S  Y  Q  U  E  S  T  I  O  N
+2    6   A  E  E  Y  Q  U  S  S  T  I  O  N
+3    9   A  E  E  I  Q  U  S  S  T  Y  O  N
+4   11   A  E  E  I  N  U  S  S  T  Y  O  Q
+5   10   A  E  E  I  N  O  S  S  T  Y  U  Q
+6   11   A  E  E  I  N  O  Q  S  T  Y  U  S
+7    7   A  E  E  I  N  O  Q  S  T  Y  U  S
+8   11   A  E  E  I  N  O  Q  S  S  Y  U  T
+9   11   A  E  E  I  N  O  Q  S  S  T  U  Y
+10  10   A  E  E  I  N  O  Q  S  S  T  U  Y
+11  11   A  E  E  I  N  O  Q  S  S  T  U  Y
+Kết quả: A E E I N O Q S S T U Y
+
+
+2.1.2 
+- Tối đa: N lần đổi chỗ (khi bị đổi chỗ dời đi ở các bước trước và 1 lần được chọn làm min để về đúng vị trí).
+- Trung bình: <= 2 lần (do cả thuật toán chỉ thực hiện N phép đổi chỗ, mỗi phép liên quan 2 phần tử: 2N / N = 2).
+
+
+2.1.3 
+Ví dụ: Mảng giảm dần (reverse sorted).
+Ví dụ cụ thể với N = 5: 5, 4, 3, 2, 1
+(Mỗi lần xét phần tử mới đều nhỏ hơn min hiện tại, do đó min được cập nhật tối đa N - 1 - i lần ở mỗi bước).
+
+
+2.1.4 Trình bày cách sắp xếp chuỗi E A S Y Q U E S T I O N bằng Insertion sort:
+
+i   j    0  1  2  3  4  5  6  7  8  9 10 11
+         E  A  S  Y  Q  U  E  S  T  I  O  N
+1   0    A  E  S  Y  Q  U  E  S  T  I  O  N
+2   2    A  E  S  Y  Q  U  E  S  T  I  O  N
+3   3    A  E  S  Y  Q  U  E  S  T  I  O  N
+4   2    A  E  Q  S  Y  U  E  S  T  I  O  N
+5   4    A  E  Q  S  U  Y  E  S  T  I  O  N
+6   2    A  E  E  Q  S  U  Y  S  T  I  O  N
+7   5    A  E  E  Q  S  S  U  Y  T  I  O  N
+8   6    A  E  E  Q  S  S  T  U  Y  I  O  N
+9   3    A  E  E  I  Q  S  S  T  U  Y  O  N
+10  4    A  E  E  I  O  Q  S  S  T  U  Y  N
+11  4    A  E  E  I  N  O  Q  S  S  T  U  Y
+Kết quả: A E E I N O Q S S T U Y
+
+
+2.1.5
+- Điều kiện j > 0 luôn false khi kết thúc: Mảng giảm dần (ví dụ: N, N-1, ..., 1). Khi đó mỗi phần tử luôn nhỏ hơn tất cả các phần tử đứng trước nó và dịch chuyển về tận j = 0.
+- Điều kiện less(a[j], a[j-1]) luôn false khi kết thúc: Mảng tăng dần (ví dụ: 1, 2, ..., N). Khi đó phần tử đứng sau luôn >= phần tử đứng trước, vòng lặp trong kết thúc ngay lần kiểm tra đầu tiên tại j = i.
+
+
+2.1.6
+Insertion sort chạy nhanh hơn.
+- Insertion sort chỉ mất N - 1 phép so sánh và 0 phép đổi chỗ -> thời gian chạy là tuyến tính O(N).
+- Selection sort vẫn phải duyệt tìm min qua mọi cặp -> thời gian chạy là bậc hai ~ N^2 / 2, tức O(N^2).
+
+
+2.1.7
+Selection sort chạy nhanh hơn.
+- Selection sort: ~ N^2 / 2 phép so sánh và N phép đổi chỗ.
+- Insertion sort: ~ N^2 / 2 phép so sánh và ~ N^2 / 2 phép đổi chỗ (phải đổi chỗ liên tục).
+Do số phép đổi chỗ của Selection sort ít hơn rất nhiều nên Selection sort chạy nhanh hơn.
+
+
+2.1.8
+Thời gian chạy là bậc hai (quadratic / O(N^2)).
+Vì với 3 giá trị phân bố ngẫu nhiên, số nghịch thế (inversions) kỳ vọng vẫn là ~ N^2 / 6, tức tỉ lệ với N^2. Thời gian của Insertion sort tỉ lệ thuận với số nghịch thế nên là O(N^2).

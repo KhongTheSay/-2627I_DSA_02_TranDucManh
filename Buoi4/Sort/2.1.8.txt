@@ -1,0 +1,3 @@
+2.1.8
+Thời gian chạy là bậc hai (quadratic / O(N^2)).
+Vì với 3 giá trị phân bố ngẫu nhiên, số nghịch thế (inversions) kỳ vọng vẫn là ~ N^2 / 6, tức tỉ lệ với N^2. Thời gian của Insertion sort tỉ lệ thuận với số nghịch thế nên là O(N^2).

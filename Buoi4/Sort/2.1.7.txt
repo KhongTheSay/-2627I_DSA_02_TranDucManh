@@ -1,0 +1,5 @@
+2.1.7
+Selection sort chạy nhanh hơn.
+- Selection sort: ~ N^2 / 2 phép so sánh và N phép đổi chỗ.
+- Insertion sort: ~ N^2 / 2 phép so sánh và ~ N^2 / 2 phép đổi chỗ (phải đổi chỗ liên tục).
+Do số phép đổi chỗ của Selection sort ít hơn rất nhiều nên Selection sort chạy nhanh hơn.

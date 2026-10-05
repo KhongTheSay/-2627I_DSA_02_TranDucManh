@@ -1,0 +1,2 @@
+Cả Insertion Sort và Selection Sort đều đòi hỏi việc truy xuất và so sánh các phần tử tại các vị trí chỉ số (index) liên tục
+Mảng (Array) hỗ trợ truy xuất theo index với độ phức tạp O(1), trong khi LinkedList mất O(n) để truy xuất một phần tử tại vị trí bất kỳ. Việc này làm hiệu năng của thuật toán giảm đi đáng kể.

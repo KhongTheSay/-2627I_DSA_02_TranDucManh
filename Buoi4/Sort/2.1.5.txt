@@ -1,0 +1,3 @@
+2.1.5
+- Điều kiện j > 0 luôn false khi kết thúc: Mảng giảm dần (ví dụ: N, N-1, ..., 1). Khi đó mỗi phần tử luôn nhỏ hơn tất cả các phần tử đứng trước nó và dịch chuyển về tận j = 0.
+- Điều kiện less(a[j], a[j-1]) luôn false khi kết thúc: Mảng tăng dần (ví dụ: 1, 2, ..., N). Khi đó phần tử đứng sau luôn >= phần tử đứng trước, vòng lặp trong kết thúc ngay lần kiểm tra đầu tiên tại j = i.

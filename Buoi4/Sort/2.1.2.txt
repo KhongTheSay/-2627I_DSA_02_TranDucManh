@@ -1,0 +1,3 @@
+2.1.2
+- Tối đa: N lần đổi chỗ (khi bị đổi chỗ dời đi ở các bước trước và 1 lần được chọn làm min để về đúng vị trí).
+- Trung bình: <= 2 lần (do cả thuật toán chỉ thực hiện N phép đổi chỗ, mỗi phép đổi chỗ liên quan 2 phần tử: 2N / N = 2).
