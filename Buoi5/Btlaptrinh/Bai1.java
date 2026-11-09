@@ -50,7 +50,7 @@ public class Bai1 {
             arr.add(arrItem);
         }
 
-        int result = Result.introTutorial(V, arr);
+        int result = Solution.introTutorial(V, arr);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
